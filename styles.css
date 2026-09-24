@@ -82,14 +82,14 @@ summary:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  min-height: 96px;
+  min-height: 80px;
   border-bottom: 1px solid var(--rule);
 }
 
 .wordmark {
   flex-shrink: 0;
   font-family: var(--serif);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.3;
   letter-spacing: -0.04em;
 }
@@ -114,7 +114,7 @@ summary:focus-visible {
 }
 
 .hero {
-  padding-block: 76px 66px;
+  padding-block: 36px 40px;
 }
 
 .eyebrow,
@@ -132,37 +132,32 @@ summary:focus-visible {
   margin: 0;
 }
 
-.hero > .eyebrow {
-  margin-bottom: 16px;
-}
-
 h1 {
-  margin: 0 0 10px -0.055em;
+  margin: 0 0 16px;
   font-family: var(--serif);
-  font-size: clamp(3.65rem, 9.9vw, 7.5rem);
-  line-height: 1.06;
+  font-size: 2rem;
+  line-height: 1.25;
   font-weight: 400;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.03em;
   overflow-wrap: anywhere;
-}
-
-.accent {
-  color: var(--accent);
 }
 
 .hero-role {
   margin: 0;
-  font-size: clamp(1.35rem, 3.1vw, 2.05rem);
-  line-height: 1.4;
-  letter-spacing: -0.025em;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .hero-note {
-  max-width: 65ch;
+  max-width: 82ch;
   margin: 10px 0 0;
   color: var(--secondary);
-  font-size: clamp(1rem, 1.7vw, 1.1875rem);
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.hero-note + .hero-note {
+  margin-top: 10px;
 }
 
 .text-link {
@@ -178,10 +173,6 @@ h1 {
 
 .text-link:hover {
   color: var(--accent-hover);
-}
-
-.hero-link {
-  margin-top: 28px;
 }
 
 .link-arrow {
@@ -280,16 +271,15 @@ h3 {
   letter-spacing: -0.045em;
 }
 
-.research-summary {
-  margin: 20px 0 0;
-  color: var(--secondary);
-  font-size: 1.125rem;
-}
-
 .publication-note {
   margin: 12px 0 0;
   color: var(--muted);
   font-size: 0.9375rem;
+}
+
+.publication-link {
+  margin-top: 8px;
+  font-size: 0.875rem;
 }
 
 .research-motif {
@@ -302,18 +292,19 @@ h3 {
   stroke-width: 0.85;
 }
 
+.role-summary {
+  max-width: 70ch;
+  margin: 12px 0 0;
+  color: var(--secondary);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
 .technology-line {
   margin: 12px 0 0;
   color: var(--muted);
   font-size: 0.8125rem;
   line-height: 1.8;
-}
-
-.entry-intro {
-  margin: 12px 0 0;
-  max-width: 64ch;
-  color: var(--secondary);
-  font-size: 0.9375rem;
 }
 
 .entry-details {
@@ -401,7 +392,7 @@ details[open] > summary .details-indicator::before {
 }
 
 .contact-links,
-.profile-placeholders {
+.social-links {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
@@ -422,14 +413,21 @@ details[open] > summary .details-indicator::before {
   overflow-wrap: anywhere;
 }
 
-.profile-placeholders {
+.social-links {
   margin-top: 6px;
   color: var(--secondary);
   font-size: 0.8125rem;
 }
 
-.pending-note {
-  color: var(--muted);
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+}
+
+.social-links a:hover {
+  color: var(--accent);
 }
 
 .education-section {
@@ -507,7 +505,7 @@ details[open] > summary .details-indicator::before {
   }
 
   .wordmark {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
 
   .site-nav {
@@ -516,20 +514,11 @@ details[open] > summary .details-indicator::before {
   }
 
   .hero {
-    padding-block: 52px 40px;
+    padding-block: 28px 32px;
   }
 
   h1 {
-    margin-bottom: 14px;
-    font-size: clamp(3.2rem, 13vw, 4.8rem);
-  }
-
-  .hero-note {
-    max-width: 29ch;
-  }
-
-  .hero-link {
-    margin-top: 20px;
+    font-size: 1.875rem;
   }
 
   .portfolio-section {
@@ -569,10 +558,6 @@ details[open] > summary .details-indicator::before {
     right: 22px;
     width: 35px;
     height: 35px;
-  }
-
-  .research-summary {
-    font-size: 1rem;
   }
 
   .publication-note {
@@ -629,7 +614,6 @@ details[open] > summary .details-indicator::before {
   }
 
   .site-nav,
-  .hero-link,
   .back-to-top,
   .skip-link {
     display: none;
@@ -640,7 +624,7 @@ details[open] > summary .details-indicator::before {
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 
   .portfolio-section,
